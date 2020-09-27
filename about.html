@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RMedia</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/menu.js"></script>
-    <script src="js/latestposts.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/title.js"></script>
     <script src="js/tablehead.js"></script>
 </head>
-<body>
+<body onload="getTitle('json/menu.json','about-title')">
     <header>
         <div class="container">
             <h1 class="logo"><a href="/"><img src="images/logo.jpg" alt="RMedia"></a></h1>
@@ -35,7 +35,7 @@
         <!-- Middle sec start -->
         <div class="middle-sec">
             <div class="left-content">
-                <h2>About</h2>
+                <h2 id="about-title"></h2>
                 <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
                     Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
                     unknown printer took a galley of type and scrambled it to make a type specimen book.It has 

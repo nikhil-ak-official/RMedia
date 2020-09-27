@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RMedia</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/menu.js"></script>
-    <script src="js/latestposts.js"></script>
-    <script src="js/tablehead.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contactform.js"></script>
+   
+    
 </head>
 <body>
     <header>
@@ -34,70 +35,26 @@
 
         <!-- Middle sec start -->
         <div class="middle-sec">
-            <div class="left-content">
+            <div class="left-content" id="contact-content">
                 <h2>Contact</h2>
-                <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
-                    survived not only five centuries, but also the leap  into electronic typesetting,remaining
-                    1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
-                    like Aldus Pagemker including versions of lorem lpsum.</p>
-                <p>why do use it?</p>
-            </div>
-            <div class="right-content">
-                <img src="images/main-image.jpg" alt="Rmedia image" class="content-img">    
-            </div>
-            <div class="table-data"> 
-                <table cellpadding="2px" cellspacing="2px">
-                    <tr class="table-head" id="thead">
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                        <th>Lorem</th>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                        <td class="apply-btn"><input type="button" value="Apply Now"></td>
-                    </tr>
-                </table>
+                <form class="contact-form" onsubmit="validate(event)">
+                    <label for="name">Enter your name:</label><br>
+                    <input type="text" id="name" name="name" required minlength="8" maxlength="25" pattern="[A-Za-z]{0,25}">
+                    <br><br>
+                    <label for="subject">Enter subject:</label><br>
+                    <input type="text" id="subject" name="subject" maxlength="25">
+                    <br><br>
+                    <label for="phone">Enter a phone number:</label><br>
+                    +91<input type="tel" id="phone" name="phone" placeholder="9485297831" pattern="[6789][0-9]{9}" maxlength="10" required>
+                    <br><br>
+                    <label for="email">Enter email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <textarea id="txt" name="description" placeholder="Description (upto 255 characters)" rows="5" cols="50" maxlength="255"  onkeyup="remaining()" ></textarea>
+                    <p id="remain"></p><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                
             </div>
         </div>
         <!-- Middle section end -->

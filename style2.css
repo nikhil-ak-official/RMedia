@@ -84,59 +84,34 @@ nav a:hover {
 	background-color: white;
 	text-align: justify;
     width: 64%;
+    height: 100%;
 }
-
-.middle-sec .left-content {
-    width: 60%;
-    float: left;
-   
-}
-
 .middle-sec .left-content h2,
-.middle-sec .left-content p {
-    padding-left: 20px;
-    padding-right: 20px;
+.middle-sec .left-content form {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.contact-form {
+    border: 1px solid #000;
+    padding: 50px 0px;
+    width: 60%;
+}
+.contact-form input {
+    width:100%;
+    padding: 12px;  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
 }
 
-.middle-sec .right-content {
-    width: 40%;
-    float: right;
-    text-align: center;
+#phone {
+    width:90%;
+    margin-left: 17px;
+    
 }
 
-
-.middle-sec .table-data {
-    width: 100%;
-    float: left;
-    display: block;
-}
-
-.table-data table {
-    background-color: #ffffff;
-	color: #ffffff;
-    padding-top: 30px;
-    width: 100%;	
-}
-
-.table-data table .table-head {
-    background-color: #6aa1b2;
-}
-
-.table-data table th,td{
-	padding-left: 10px;
-} 
-.table-data table tr{
-		height: 30px;
-}
-.table-data table td{
-	background-color:#95e1f9;
-}
-.apply-btn{
-	width: 170px;
-	border:none;
-	text-align: center;
-	padding: 0px;
-}
 
 .right-sec {
     float: right;
@@ -179,46 +154,4 @@ footer .footer-item {
     float: left;
     padding: 20px 2.5%;
     text-align: justify;
-}
-
-/* contact */
-#contact-content {
-    width: 100%;
-}
-.contact-form {
-    border: 1px solid #000;
-    padding: 50px 0px;
-    width: 60%;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-.contact-form input {
-    width:100%;
-    padding: 12px;  
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px;
-}
-
-#phone {
-    width:90%;
-    margin-left: 17px;
-    
-}
-/* index */
-#dynamicContent {
-    height: 258.37px;
-}
-.display {
-    display: none;
-}
-#readall {
-    margin-left: 20px;
-}
-
-.content-img {
-    padding-top: 20px;
-    width: 80%;
 }

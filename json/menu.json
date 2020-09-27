@@ -2,18 +2,23 @@
     "menu":[
         {"name":"Home",
         "goto":"index.html",
-        "notfound": false},
+        "notfound": false,
+        "id":"home-title"},
         {"name":"About",
         "goto":"about.html",
-        "notfound": false},
+        "notfound": false,
+        "id":"about-title"},
         {"name":"Services",
         "goto":"services.html",
-        "notfound": false},
+        "notfound": false,
+        "id":"service-title"},
         {"name":"Contact",
         "goto":"contact.html",
-        "notfound": false},
+        "notfound": false,
+        "id":"contact-title"},
         {"name":"extra",
         "goto":"index.html",
-        "notfound": true}
+        "notfound": true,
+        "id":"extra-title"}
     ]
 }
