@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RMedia</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h1 class="logo">
+            <a href="/"><img src="images/logo.jpg" alt="RMedia" /></a>
+          </h1>
+          <div class="search-wrap">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="header-bottom"></div> -->
+    </header>
+    <div class="container">
+      <div class="content">
+        
+        <!-- Left section end -->
+
+        <!-- Middle sec start -->
+        <div class="middle-sec">
+          <div class="top">
+            <div class="left-content" id="register-content">
+              <form class="register" onsubmit="return submit()">
+                <h2>Register</h2>
+                <label for="fname">First Name:</label><br>
+                <input
+                  type="text"
+                  id="fname"
+                  name="name"
+                >
+                <span id="fnameerror"></span>
+                <br><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname">
+                <span class="error" id="lnameerror"></span>
+                <br><br>
+                <label for="dob">DOB:</label><br>
+                <input type="date" id="dob" name="dob">
+                <span  class="error" id="doberror"></span>
+                <br><br>
+                Gender:<br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <span  class="error" id="gendererror"></span>
+               <br><br>
+                <label for="psw">Password</label><br>
+                <input type="password" id="psw" name="psw">
+                <span  class="error" id="pswerror"></span>
+                 <br><br>
+                <label for="pswc">Confirm Password</label><br>
+                <input type="password" id="pswc" name="pswc">
+                <span  class="error" id="pswcerror"></span>
+                <br><br>
+                <input type="checkbox" id="tc" name="tc">
+                <label for="tc">Terms & Conditions</label><br>
+                <span  class="error" id="tcerror"></span>
+                <button type="submit" id="submit">Register</button> 
+                <div class="popup">
+                  <div class="popup-box">
+                    <p>Please<a href="login.html">click here</a>to login</p>
+                  </div>
+                </div>
+              </form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-item">
+            <p>
+              lorem lpsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div class="footer-item">
+            <p>
+              lorem lpsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div class="footer-item">
+            <p>
+              lorem lpsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div class="footer-item">
+            <p>
+              lorem lpsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <script src="js/register.js"></script>
+  </body>
+</html>

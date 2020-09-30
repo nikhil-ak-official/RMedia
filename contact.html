@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RMedia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/common.js"></script>
+    <script src="js/contactform.js"></script>
+    <script src="js/commonCall.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h1 class="logo">
+            <a href="/"><img src="images/logo.jpg" alt="RMedia" /></a>
+          </h1>
+          <div class="search-wrap">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="header-bottom"></div> -->
+    </header>
+    <div class="container">
+      <div class="content">
+        <div class="left-sec">
+          <nav>
+            <ul id="left-ul"></ul>
+          </nav>
+        </div>
+        <!-- Left section end -->
+
+        <!-- Middle sec start -->
+        <div class="middle-sec">
+          <div class="top">
+            <div class="left-content"  id="contact-content">
+                <h2>Contact</h2> 
+                <form class="contact-form" onsubmit="validate(event)">
+                    <label for="name">Enter your name:</label><br>
+                    <input type="text" id="name" name="name" required minlength="8" maxlength="25" pattern="[A-Za-z\sA-Za-z]{0,25}">
+                    <br><br>
+                    <label for="subject">Enter subject:</label><br>
+                    <input type="text" id="subject" name="subject" maxlength="25">
+                    <br><br>
+                    <label for="phone">Enter a phone number:</label><br>
+                    +91<input type="tel" id="phone" name="phone" placeholder="9485297831" pattern="[6789][0-9]{9}" maxlength="10" required>
+                    <br><br>
+                    <label for="email">Enter email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <textarea id="txt" name="description" placeholder="Description (upto 255 characters)" maxlength="255"  onkeyup="remaining()" ></textarea>
+                    <p id="remain"></p><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+          </div>
+        
+        </div>
+        <!-- Middle section end -->
+
+        <!-- Right sec start -->
+        <div class="right-sec">
+          <h3>Latest Posts</h3>
+          <ul class="right-ul" id="right-ul"></ul>
+        </div>
+        <!--  Right sec end-->
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

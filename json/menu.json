@@ -1,0 +1,24 @@
+{
+    "menu":[
+        {"name":"Home",
+        "goto":"home.html",
+        "notfound": false,
+        "id":"home-title"},
+        {"name":"About",
+        "goto":"about.html",
+        "notfound": false,
+        "id":"about-title"},
+        {"name":"Services",
+        "goto":"services.html",
+        "notfound": false,
+        "id":"service-title"},
+        {"name":"Contact",
+        "goto":"contact.html",
+        "notfound": false,
+        "id":"contact-title"},
+        {"name":"extra",
+        "goto":"home.html",
+        "notfound": true,
+        "id":"extra-title"}
+    ]
+}

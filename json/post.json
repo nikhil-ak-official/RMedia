@@ -1,0 +1,16 @@
+{
+    "latestposts":[
+        {"imageurl":"images/post-image.jpg",
+        "gotourl":"home.html"
+        },
+        {"imageurl":"images/post-image.jpg",
+        "gotourl":"home.html"
+        },
+        {"imageurl":"images/post-image.jpg",
+        "gotourl":"home.html"
+        },
+        {"imageurl":"images/post-image.jpg",
+        "gotourl":"home.html"
+        }
+    ]
+}
