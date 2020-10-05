@@ -18,6 +18,7 @@ function loadTableConfig(configpath) {
   });
 }
 var myTable;
+var sortDirection = {};
 function generateTable() {
   myTable = document.getElementsByTagName("table")[0];
   var tableHead = document.createElement("thead");
@@ -29,21 +30,11 @@ function generateTable() {
     var tableHeader = document.createElement("th");
     tableHeader.innerHTML = th;
     headRow.appendChild(tableHeader);
-    columnName = configTable[i].field;
+    
     if(configTable[i].sortable) {
-      tableHeader.addEventListener("click", function() {
-        console.log(columnName);
-        responseTable = responseTable.sort(function(r1,r2) {
-          if(r1.columnName > r2.columnName) {
-            return 1;
-          }
-          else {
-            return -1;
-          }
-        }) 
-        console.log(responseTable);
-        tableData(responseTable);
-      })
+      let columnName = configTable[i].field;
+      sortDirection[columnName] = "desc"; 
+      tableHeader.addEventListener("click", function() {sortTable(columnName)});
     }
    
   }
@@ -52,7 +43,7 @@ function generateTable() {
 }
 function tableData(responseTable) {
   var tableBody = null;
-  clearTable();
+ 
   tableBody = document.createElement("tbody");
  
   myTable.appendChild(tableBody);
@@ -64,10 +55,11 @@ function tableData(responseTable) {
     for(var j=0;j<configTable.length;j++) {
       if((responseTable[i][configTable[j].field]!=="") && (responseTable[i][configTable[j].field]!==null)) {
         switch(configTable[j].typeof) {
-            // case "date" : tableData += `<td>${new Date(responseTable[i][configTable[j].field])}</td>`;break;
+            case "date" :
+            case "number": tableData += `<td class="alignRight">${responseTable[i][configTable[j].field]}</td>`;break;
             case "link" : tableData += `<td><a href="">${responseTable[i][configTable[j].field]}</a></td>`;break;
             case "button" : tableData += `<td class="apply-btn"><button onClick="buttonClick()">${responseTable[i][configTable[j].field]}</button></td>`;break;
-            default : tableData += `<td>${responseTable[i][configTable[j].field]}</td>`;break;
+            default : tableData += `<td class="alignLeft">${responseTable[i][configTable[j].field]}</td>`;break;
           }
         }
         else {
@@ -89,4 +81,28 @@ function clearTable(){
   console.log(document.getElementsByTagName("table")[0]);
 
 }
+function sortTable(columnName) {
+ 
+  clearTable();
+  if(sortDirection[columnName] == "desc") {
+    sortDirection[columnName] = "asc";
+    responseTable = responseTable.sort((r1,r2) => {
+      return r1[columnName] > r2[columnName] ? 1 : -1
+    })
+    console.log(columnName,sortDirection[columnName]);
+  }
+  else if (sortDirection[columnName] == "asc") {
+    sortDirection[columnName] = "desc";
+    responseTable = responseTable.sort((r1,r2) => {
+      return r1[columnName] < r2[columnName] ? 1 : -1
+    })
+    console.log(columnName,sortDirection[columnName]);
+
+  }
+  tableData(responseTable);
+  for(i in sortDirection) {
+    console.log(i);
+  }
+}
+
  

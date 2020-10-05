@@ -27,7 +27,7 @@
         {
             "field":"Apply",
             "header":"Apply",
-            "sortable":true,
+            "sortable":false,
             "typeof":"button"
         }
         

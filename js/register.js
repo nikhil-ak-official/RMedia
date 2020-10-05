@@ -27,7 +27,7 @@ function submitForm(e) {
         let user = {"firstname": fname,"lastname": lname,"username": uname,"password":psw,"dob":dob,"gender":gender};
         userlist.push(user);
         localStorage.setItem("users",JSON.stringify(userlist));
-        toLogin();
+        popUp();
     } 
     
     return false;
@@ -109,6 +109,6 @@ function validate() {
 }
 
     
-function toLogin() {
+function popUp() {
     document.getElementsByClassName("popup")[0].style.display="block";
 }
