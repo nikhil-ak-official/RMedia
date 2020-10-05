@@ -1,3 +1,5 @@
+
+
 function loadPage(content,image) {
   getData( "json/dynamicpage.json",function(response) {
     if(response) {
@@ -10,9 +12,6 @@ function getHome(home,content,image) {
   var newDiv = document.getElementById(content);
   var imgDiv = document.getElementById(image);
   imgDiv.innerHTML = '<img class="content-img" src=' + home.image + '>';
-  var head = document.createElement("h2");
-  head.innerHTML = home.title;
-  newDiv.appendChild(head);
   var para = newDiv.appendChild(document.createElement("p"));
   var contents = home.content;
   var content2 = home.content2; 
@@ -40,14 +39,12 @@ function getHome(home,content,image) {
 var flag=0;
 function readMore() {
   if(flag==0) {
-    console.log("got in");
     document.getElementById("more").classList.remove("display");
     document.getElementById("dot").classList.add("display");
     document.getElementById("readall").innerHTML="Read Less";
     flag=1;
   }
   else if(flag==1) {
-    console.log("read less")
     document.getElementById("more").classList.add("display");
     document.getElementById("dot").classList.remove("display");
     document.getElementById("readall").innerHTML="Read More";

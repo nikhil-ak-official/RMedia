@@ -6,18 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RMedia</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/common.js"></script>
-    <script src="js/tablehead.js"></script>
-    <script src="js/commonCall.js"></script>
+   
   </head>
-  <body onload="loadTitle('about-title')">
+  <body>
     <header>
       <div class="container">
         <div class="head">
           <h1 class="logo">
-            <a href="/"><img src="images/logo.jpg" alt="RMedia" /></a>
+            <a href=""><img src="images/logo.jpg" alt="RMedia" /></a>
           </h1>
-          <div class="search-wrap">
+          <div class="search-wrap" id="searchbox">
             <input
               type="search"
               name="search"
@@ -42,7 +40,7 @@
         <div class="middle-sec">
           <div class="top">
             <div class="left-content">
-                <h2 id="about-title"></h2>
+                <h2 id="title"></h2>
                 <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
                     Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
                     unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
@@ -59,63 +57,7 @@
           <div class="bottom">
             <div class="table-data">
               <table cellpadding="2px" cellspacing="2px">
-                <tr class="table-head" id="thead"></tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
+               
               </table>
             </div>
           </div>
@@ -158,5 +100,13 @@
         </div>
       </div>
     </footer>
+    <script src="js/common.js"></script>
+    <script src="js/table.js"></script>
+    <script>
+      loadTable('json/tableAbout.json');
+    </script>
+    <script src="js/commonCall.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>

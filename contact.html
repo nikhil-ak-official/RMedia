@@ -6,18 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RMedia</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/common.js"></script>
-    <script src="js/contactform.js"></script>
-    <script src="js/commonCall.js"></script>
+    
   </head>
   <body>
     <header>
       <div class="container">
         <div class="head">
           <h1 class="logo">
-            <a href="/"><img src="images/logo.jpg" alt="RMedia" /></a>
+            <a href=""><img src="images/logo.jpg" alt="RMedia" /></a>
           </h1>
-          <div class="search-wrap">
+          <div class="search-wrap" id="searchbox">
             <input
               type="search"
               name="search"
@@ -42,7 +40,7 @@
         <div class="middle-sec">
           <div class="top">
             <div class="left-content"  id="contact-content">
-                <h2>Contact</h2> 
+                <h2 id="title"></h2> 
                 <form class="contact-form" onsubmit="validate(event)">
                     <label for="name">Enter your name:</label><br>
                     <input type="text" id="name" name="name" required minlength="8" maxlength="25" pattern="[A-Za-z\sA-Za-z]{0,25}">
@@ -102,5 +100,11 @@
         </div>
       </div>
     </footer>
+   
+    <script src="js/common.js"></script>
+    <script src="js/contactform.js"></script>
+    <script src="js/commonCall.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>

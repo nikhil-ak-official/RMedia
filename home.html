@@ -6,25 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RMedia</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/common.js"></script>
-    <script src="js/dynamicpage.js"></script>
-    <script src="js/tablehead.js"></script>
-    <script src="js/commonCall.js"></script>
+   
+   
+   
   </head>
   <body onload="loadPage('dynamicContent','dynamicImage')">
     <header>
-      <div class="container">
+      <div class="container" id="head">
         <div class="head">
           <h1 class="logo">
-            <a href="/"><img src="images/logo.jpg" alt="RMedia" /></a>
+            <a href=""><img src="images/logo.jpg" alt="RMedia" /></a>
           </h1>
-          <div class="search-wrap">
+          <div class="search-wrap" id="searchbox">
             <input
               type="search"
               name="search"
               id="search"
               placeholder="Search..."
-            />
+            >
           </div>
         </div>
       </div>
@@ -42,70 +41,16 @@
         <!-- Middle sec start -->
         <div class="middle-sec">
           <div class="top">
-            <div class="left-content" id="dynamicContent"></div>
+            <div class="left-content" id="dynamicContent">
+              <h2 id="title"></h2>
+            </div>
             
             <div class="right-content" id="dynamicImage"></div>
           </div>
           <div class="bottom">
             <div class="table-data">
               <table cellpadding="2px" cellspacing="2px">
-                <tr class="table-head" id="thead"></tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td>Lorem</td>
-                  <td class="apply-btn">
-                    <input type="button" value="Apply Now" />
-                  </td>
-                </tr>
+                
               </table>
             </div>
           </div>
@@ -148,5 +93,18 @@
         </div>
       </div>
     </footer>
+    
+    <script src="js/common.js"></script>
+    <script src="js/dynamicpage.js"></script>
+    <script src="js/table.js"></script>
+    <script>
+      loadTable('json/tableHome.json','json/homeConfig.json');
+    </script>
+    <script src="js/commonCall.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/logout.js"></script>
+   
+    
+    
   </body>
 </html>

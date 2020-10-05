@@ -1,13 +1,12 @@
 
 function validate(e) {
-    console.log("validate");
     e.preventDefault();
-    var name = document.getElementById("name").value;
-    var subject = document.getElementById("subject").value;
-    var phone = document.getElementById("phone").value;
-    var email = document.getElementById("email").value;
-    var txt = document.getElementById("txt").value;
-    var payload = {
+    let name = document.getElementById("name").value;
+    let subject = document.getElementById("subject").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let txt = document.getElementById("txt").value;
+    let payload = {
         "name": name,
         "subject":subject,
         "phone": phone,

@@ -1,2 +1,2 @@
 loadMenu();
-loadPost();
+getName();

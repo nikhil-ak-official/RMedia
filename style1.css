@@ -12,7 +12,6 @@ body{
 
 header{
 	background-color: #95E1F9;
-	height: 100px;
     width: 100%;
     border-bottom: 35px solid #66c5e4;
 }
@@ -69,34 +68,6 @@ header{
     flex-direction: column;
     padding-left: 20px;
 }
-
-/* login */
-.login {
-    border: 3px solid #f1f1f1;
-    margin: auto;
-    padding: 40px 80px 80px 80px;
-}
-.login label {
-    padding-right: 10px;
-}
-.login input {
-    padding:10px;
-}
-.login h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-#submit {
-    width: 100%;
-    padding: 5px;
-}
-.error {
-    color: red;
-    font-size: 12px;
-}
-
-
-
 
 .right-sec {
     flex: 1;
@@ -180,6 +151,17 @@ footer {
     }
 }
 @media (max-width: 416px) {
+    .head {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .search-wrap {
+        text-align: center;
+    }
     .content-img {
         max-width: 80%;
     }

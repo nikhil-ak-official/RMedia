@@ -1,3 +1,4 @@
+
 /* menu */
 function loadMenu() {
   getData( "json/menu.json",function(response) {
@@ -7,13 +8,13 @@ function loadMenu() {
   });
 }
 function getMe(menu) {
-  console.log("inside getme");
   var out = "";
   var i;
   for(i = 0; i < menu.length; i++) {
       if (menu[i].notfound == false) {
           out += '<li><a href=' + menu[i].goto + '>' + 
           menu[i].name + '</a></li>';
+          getTitle(menu[i]);
         }
         else if (menu[i].notfound == true) {
             out += '<li><a href=' + "error.html" + '>' + 
@@ -21,53 +22,48 @@ function getMe(menu) {
         }      
         }
     document.getElementById("left-ul").innerHTML = out;
-};
-
+}
 
 /* title dynamic */
-
-function loadTitle(id) {
-  getData("json/menu.json",function(response) {
-    if(response) {
-      getTitle(response.menu,id);
+function getTitle(menuobj) {
+    if(location.pathname.indexOf(menuobj.goto)!==-1) {
+      document.getElementById('title').innerHTML= menuobj.name;
+      loadPost(menuobj.name);
     }
-  });
 }
-function getTitle(title,id) {
-    console.log("inside getme");
-    var i=0;
-    for(i = 0; i < title.length; i++) {
-        if(id == title[i].id) {
-            document.getElementById(id).innerHTML = title[i].name;}
-    }
-};
 
 
 /* latest posts*/
-function loadPost() {
-  getData("json/post.json",function(response) {
+function loadPost(page) {
+  getData("json/latestposts.json",function(response) {
     if(response) {
-      getPost(response.latestposts);
+      getPost(response.latestpost,page);
     }
   });
 }
-function getPost(latestposts) {
-  console.log("inside post");
+function getPost(latestposts,page) {
   var out = "";
   var i;
   for(i = 0; i < latestposts.length; i++) {
-      out += '<li><a href=' + latestposts[i].gotourl + '><img src=' 
-      + latestposts[i].imageurl + '></a></li>';
+    if(page == latestposts[i].id) {
+      var posts = latestposts[i].posts;
+      for(i=0; i<posts.length; i++) {
+        out += '<li><a href=' + posts[i].gotourl + '><img src=' 
+        + posts[i].imageurl + '></a></li>';
+      }
     }
+  }
     document.getElementById("right-ul").innerHTML = out;
-};
+}
+
+
+
 
 
 /* commonCall */
 function getData(jsonpath,fnt) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
-    console.log(this.responseText);
     if (this.readyState == 4 && this.status == 200) {
       fnt(JSON.parse(this.responseText));
     }
@@ -80,7 +76,22 @@ function getData(jsonpath,fnt) {
 }
 
 
-
+/*hi username */
+function getName() {
+  if(localStorage.getItem("currentUser")) {
+    let name = JSON.parse(localStorage.getItem("currentUser"));
+    let lname = name.lname;
+    let fname = name.fname;
+    let head = document.getElementById("searchbox");
+    let newdiv = document.createElement("div");
+    head.appendChild(newdiv);
+    let para = document.createElement("p");
+    para.innerHTML = "Hi" + " " + fname + " " + lname + "<button id='logout'>Logout</button>";
+    newdiv.appendChild(para);
+    // div.setAttribute("class","subHead");
+  }
+  
+};
 
 
 
