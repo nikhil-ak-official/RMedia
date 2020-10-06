@@ -1,0 +1,29 @@
+{
+    "config":[
+        {
+            "field":"Name",
+            "header":"EmpName",
+            "sortable":true,
+            "typeof":"string"
+        },
+        {
+            "field":"EmpNo",
+            "header":"EmpNo",
+            "sortable":true,
+            "typeof":"number"
+        },
+        {
+            "field":"Dob",
+            "header":"DOB",
+            "sortable":true,
+            "typeof":"date"
+        },
+        {
+            "field":"Email",
+            "header":"Email",
+            "sortable":true,
+            "typeof":"link"
+        }
+        
+    ]
+}

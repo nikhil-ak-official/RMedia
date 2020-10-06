@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RMedia</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h1 class="logo">
+            <a href=""><img src="images/logo.jpg" alt="RMedia" /></a>
+          </h1>
+          <div class="search-wrap" id="searchbox">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="header-bottom"></div> -->
+    </header>
+    <div class="container">
+      <div class="content">
+        <div class="left-sec">
+          <nav>
+            <ul id="left-ul"></ul>
+          </nav>
+        </div>
+        <!-- Left section end -->
+
+        <!-- Middle sec start -->
+        <div class="middle-sec">
+          <div class="top">
+            <div class="left-content">
+                <h2 id="title"></h2>
+                <p> Lorem lpsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem lpsum has been the industry's standard dummy text ever since the 1500's,when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book.It has 
+                    survived not only five centuries, but also the leap  into electronic typesetting,remaining
+                    1960s with the release ofLetraset sheets containing lorem lpsum passages,and more recently with desktop publishing software
+                    like Aldus Pagemker including versions of lorem lpsum.</p>
+                <p>why do use it?</p>
+            </div>
+            
+            <div class="right-content">
+                <img src="images/main-image.jpg" alt="Rmedia image" class="content-img">
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="table-data">
+              <table cellpadding="2px" cellspacing="2px">
+                
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Middle section end -->
+
+        <!-- Right sec start -->
+        <div class="right-sec">
+          <h3>Latest Posts</h3>
+          <ul class="right-ul" id="right-ul"></ul>
+        </div>
+        <!--  Right sec end-->
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+        <div class="footer-item">
+          <p>
+            lorem lpsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/table.js"></script>
+    <script>
+      loadTable('json/tableServices.json','json/servicesConfig.json');
+    </script>
+    <script src="js/search.js"></script>
+    <script src="js/logout.js"></script>
+  </body>
+</html>

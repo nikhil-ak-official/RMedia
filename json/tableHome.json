@@ -1,0 +1,40 @@
+{
+    "table":[
+        {
+            "Name":"nikhil",
+            "EmpNo": 848,
+            "Dob": "1998-07-31",
+            "Email":"n@gmail.com",
+            "Apply": "applynow"
+        },
+        {
+            "Name":"anil",
+            "EmpNo":820,
+            "Dob": "1992-02-17",
+            "Email":"a@gmail.com",
+            "Apply": "applynow"
+        },
+        {
+            "Name":"kumar",
+            "EmpNo":840,
+            "Dob": "1998-03-01",
+            "Email":"k@gmail.com",
+            "Apply": "applynow"
+        },
+        {
+            "Name":"sonu",
+            "EmpNo":811,
+            "Dob": "1992-11-15",
+            "Email":"s@gmail.com",
+            "Apply": "applynow"
+        },
+        {
+            "Name":"deepu",
+            "EmpNo":860,
+            "Dob": "1992-02-19",
+            "Email":"d@gmail.com",
+            "Apply": "applynow"
+        }
+
+    ]
+}

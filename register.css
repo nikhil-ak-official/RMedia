@@ -1,0 +1,88 @@
+body{
+	padding: 0;
+    margin: 0;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1084px;
+    margin: 0 auto;
+}
+
+header{
+	background-color: #95E1F9;
+    width: 100%;
+    height:100px;
+    border-bottom: 35px solid #66c5e4;
+}
+
+
+.content {
+    color: #000000;
+    display: flex;
+    height: 700px;
+    background-color: #f1f1f1;
+}   
+
+
+
+/* login */
+.registerDiv {
+    /* border: 3px solid #f1f1f1; */
+    box-shadow: 5px 5px 5px 5px grey;
+    margin: auto;
+    padding: 40px;
+    background-color: #fff;
+    width:50%;
+}
+.register {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fields {
+    flex-basis: 50%;
+}
+#lastField {
+    padding-top: 16px;
+}
+.register h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#submit {
+    width: 100%;
+    padding: 5px;
+}
+
+/* register */
+  
+/* register pop up */
+.popup {
+        display: none; 
+        position: fixed; 
+        z-index: 1;         
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.popup-box {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
