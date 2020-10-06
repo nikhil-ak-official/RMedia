@@ -1,2 +1,0 @@
-loadMenu();
-getName();

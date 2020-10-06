@@ -22,24 +22,21 @@ function loginValid() {
     if (userpsw==null || userpsw=="") {
         pswerror.innerHTML="Please fill out this field";
     }
-
-    for(var i=0;i<userList.length;i++) {
-        if(username == userList[i].username) {
-            if(userpsw == userList[i].password) {
-                var currentuser = {"fname":userList[i].firstname,"lname":userList[i].lastname};
-                localStorage.setItem("currentUser",JSON.stringify(currentuser));
-                return true;
-            }
-            else {
-                pswerror.innerHTML = "Wrong password";
-                return false;
-            }
+   
+    if(username == userList["username"]) {
+        if(userpsw == userList["password"]) {
+            var currentuser = {"fname":userList["firstname"],"lname":userList["lastname"]};
+            localStorage.setItem("currentUser",JSON.stringify(currentuser));
+            return true;
         }
-       
+        else {
+            pswerror.innerHTML = "Wrong password";
+            return false;
+        }
     }
     nameerror.innerHTML = "User doesnt  exist";
     return false;
-}
+};
 
 
            

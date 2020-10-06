@@ -56,14 +56,14 @@ function tableData(responseTable) {
       if((responseTable[i][configTable[j].field]!=="") && (responseTable[i][configTable[j].field]!==null)) {
         switch(configTable[j].typeof) {
             case "date" :
-            case "number": tableData += `<td class="alignRight">${responseTable[i][configTable[j].field]}</td>`;break;
+            case "number": tableData += `<td style="text-align:right">${responseTable[i][configTable[j].field]}</td>`;break;
             case "link" : tableData += `<td><a href="">${responseTable[i][configTable[j].field]}</a></td>`;break;
             case "button" : tableData += `<td class="apply-btn"><button onClick="buttonClick()">${responseTable[i][configTable[j].field]}</button></td>`;break;
-            default : tableData += `<td class="alignLeft">${responseTable[i][configTable[j].field]}</td>`;break;
+            default : tableData += `<td>${responseTable[i][configTable[j].field]}</td>`;break;
           }
         }
         else {
-          tableData += `<td>"-"</td>`;
+          tableData += `<td style="text-align:center"> --- </td>`;
         }
       }
       trow.innerHTML = tableData;

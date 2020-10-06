@@ -13,7 +13,6 @@ var tcerror = document.getElementById("tcerror");
 var pswerror = document.getElementById("pswerror");
 var current = new Date();
 console.log(current);
-var userlist = [];
 function submitForm(e) {
     e.preventDefault();
     fname = document.getElementById("fname").value;
@@ -24,8 +23,7 @@ function submitForm(e) {
     dob = document.getElementById("dob").value;
     var isValid = validate();
     if (isValid) {
-        let user = {"firstname": fname,"lastname": lname,"username": uname,"password":psw,"dob":dob,"gender":gender};
-        userlist.push(user);
+        let userlist = {"firstname": fname,"lastname": lname,"username": uname,"password":psw,"dob":dob,"gender":gender};
         localStorage.setItem("users",JSON.stringify(userlist));
         popUp();
     } 
@@ -74,7 +72,8 @@ function validate() {
     let genderlist = document.getElementsByName('gender');
     for(var i=0; i<genderlist.length;i++){
         if(genderlist[i].checked == true){
-            gender = genderlist[i];   
+            gender = genderlist[i].value;   
+            console.log(gender);
             break;
         }
         else {
